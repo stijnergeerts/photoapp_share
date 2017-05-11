@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="photoapp_share_tomcat:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="photoapp_share_tomcat.war">
+      <element id="artifact" artifact-name="photoapp_share_tomcat:war exploded" />
+    </root>
+  </artifact>
+</component>

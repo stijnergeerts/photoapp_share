@@ -1,0 +1,3 @@
+service/EventTextService.class
+servlets/PhotoServlet.class
+dom/EventText.class

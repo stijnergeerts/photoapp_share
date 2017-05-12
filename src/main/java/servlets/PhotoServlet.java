@@ -70,6 +70,6 @@ public class PhotoServlet extends HttpServlet {
         req.setAttribute("photos",array);
         req.setAttribute("eventText", eventText);
 
-        req.getRequestDispatcher("/pages/index.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/pages/index.jsp").forward(req,resp);
     }
 }

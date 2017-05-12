@@ -52,6 +52,9 @@ public class PhotoServlet extends HttpServlet {
         String favicon = cloudinary.url().format("jpg")
                 .transformation(new Transformation())
                 .generate(eventText.getCloudinaryDirectory()+"/logo");
+        String linkIcon = cloudinary.url().format("jpg")
+                .transformation(new Transformation().height(200).width(200))
+                .generate(eventText.getCloudinaryDirectory()+"/logo");
         String logo = cloudinary.url().format("jpg")
                 .transformation(new Transformation())
                 .imageTag(eventText.getCloudinaryDirectory()+"/logo", Cloudinary.asMap("alt","Logo_"+title));
@@ -65,6 +68,7 @@ public class PhotoServlet extends HttpServlet {
                             .imageTag(eventText.getCloudinaryDirectory()+"/"+array[i], Cloudinary.asMap("alt","Sample Image"));
         }
         req.setAttribute("favicon", favicon);
+        req.setAttribute("linkIcon", linkIcon);
         req.setAttribute("logo", logo);
         req.setAttribute("qr", qrImage);
         req.setAttribute("photos",array);

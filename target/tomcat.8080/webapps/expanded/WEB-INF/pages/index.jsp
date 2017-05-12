@@ -9,6 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     final String favicon = (String)request.getAttribute("favicon");
+    final String linkIcon = (String)request.getAttribute("linkIcon");
     final String logo = (String)request.getAttribute("logo");
     final String qr = (String)request.getAttribute("qr");
     final String[] photos = (String[])request.getAttribute("photos");
@@ -31,6 +32,7 @@
 <body>
 <div id="logo">
     <%=logo%>
+    <img src="<%=linkIcon%>" class="hidden">
 </div>
 <%if (eventText.getTextUpper()==null||eventText.getTextUpper().equals("")){%>
 <%} else {%>

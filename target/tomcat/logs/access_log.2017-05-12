@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [12/May/2017:10:37:33 +0800] "GET /photoapp_share_tomcat HTTP/1.1" 302 - http-bio-9966-exec-1 0
+0:0:0:0:0:0:0:1 - - [12/May/2017:10:37:33 +0800] "GET /photoapp_share_tomcat/ HTTP/1.1" 500 2330 http-bio-9966-exec-2 67
+0:0:0:0:0:0:0:1 - - [12/May/2017:10:37:33 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-9966-exec-3 0
+0:0:0:0:0:0:0:1 - - [12/May/2017:10:41:33 +0800] "GET /photoapp_share_tomcat/photo?eventId=59116c03ffdcbe0004ca8d02&photo=chaumet1&photo=chaumet2&photo=chaumet3 HTTP/1.1" 200 1198 http-bio-9966-exec-1 7123

@@ -19,7 +19,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet" type="text/css">
-    <!--<link rel="icon" href="<%=favicon%>">-->
+    <link rel="icon" href="<%=favicon%>">
     <title>
         <%if (eventText.getTextUpper()==null||eventText.getTextUpper().equals("")){%>
         <%=eventText.getCloudinaryDirectory()%>

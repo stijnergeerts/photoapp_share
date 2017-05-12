@@ -1,2 +1,1 @@
-java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/photoapp_share_tomcat.war
-
+web:    java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/photoapp_share_tomcat.war

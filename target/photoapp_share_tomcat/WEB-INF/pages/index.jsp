@@ -18,7 +18,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="../../resources/css/main.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="<%=favicon%>">
     <title>
         <%if (eventText.getTextUpper()==null||eventText.getTextUpper().equals("")){%>

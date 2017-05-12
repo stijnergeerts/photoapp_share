@@ -18,7 +18,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../resources/css/main.css" rel="stylesheet" type="text/css">
+    <link href="../../resources/css/main.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="<%=favicon%>">
     <title>
         <%if (eventText.getTextUpper()==null||eventText.getTextUpper().equals("")){%>
@@ -28,7 +28,7 @@
         <%}%>
     </title>
 </head>
-<body style="font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "å¾®è½¯é›…é»‘", Arial, sans-serif">
+<body>
 <div id="logo">
     <%=logo%>
 </div>

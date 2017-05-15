@@ -43,6 +43,7 @@
         style="background-image: url(<%=backgroundImage%>)"
         <%}%>
 >
+<div style="display:none;"><img src="<%=linkIcon%>"/></div>
 <div id="logo">
     <%=logo%>
     <img src="<%=linkIcon%>" class="hidden">

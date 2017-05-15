@@ -12,8 +12,11 @@
     final String linkIcon = (String)request.getAttribute("linkIcon");
     final String logo = (String)request.getAttribute("logo");
     final String qr = (String)request.getAttribute("qr");
+     String backgroundImage = (String)request.getAttribute("backgroundImage");
     final String[] photos = (String[])request.getAttribute("photos");
     final EventText eventText = (EventText)request.getAttribute("eventText");
+
+    backgroundImage="";
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +32,16 @@
         <%}%>
     </title>
 </head>
-<body>
+<body
+        <%if (backgroundImage==null||backgroundImage.equals("")){
+            if (eventText.getBackgroundColor()==null||eventText.getBackgroundColor().equals("")){%>
+        <%} else {%>
+        style="background-color: <%=eventText.getBackgroundColor()%>"
+        <%}%>
+        <%} else {%>
+        style="background-image: url(<%=backgroundImage%>)"
+        <%}%>
+>
 <div id="logo">
     <%=logo%>
     <img src="<%=linkIcon%>" class="hidden">

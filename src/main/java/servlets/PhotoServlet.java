@@ -37,7 +37,7 @@ public class PhotoServlet extends HttpServlet {
 
         final EventTextService eventTextService = new EventTextService();
 
-        EventText eventText = new EventText();
+        EventText eventText;
 
         String jsonString = null;
         try {
@@ -61,6 +61,9 @@ public class PhotoServlet extends HttpServlet {
         String qrImage = cloudinary.url().format("jpg")
                 .transformation(new Transformation())
                 .imageTag(eventText.getCloudinaryDirectory()+"/qr", Cloudinary.asMap("alt","Qr_"+title));
+        String backgroundImage = cloudinary.url().format("jpg")
+                .transformation(new Transformation())
+                .generate(eventText.getCloudinaryDirectory()+"/backgroundImage");
         for(int i = 0; i<array.length; i++){
             array[i]=
                     cloudinary.url().format("jpg")
@@ -71,6 +74,7 @@ public class PhotoServlet extends HttpServlet {
         req.setAttribute("linkIcon", linkIcon);
         req.setAttribute("logo", logo);
         req.setAttribute("qr", qrImage);
+        req.setAttribute("backgroundImage", backgroundImage);
         req.setAttribute("photos",array);
         req.setAttribute("eventText", eventText);
 

@@ -9,6 +9,7 @@ public class EventText {
     public String textUnderPhoto;
     public String textBottom;
     public String textColor;
+    public String backgroundColor;
     public String cloudinaryDirectory;
 
     public EventText(String textUpper, String textUnderPhoto, String textBottom, String textColor) {
@@ -23,6 +24,15 @@ public class EventText {
         this.textUnderPhoto = textUnderPhoto;
         this.textBottom = textBottom;
         this.textColor = textColor;
+        this.cloudinaryDirectory = cloudinaryDirectory;
+    }
+
+    public EventText(String textUpper, String textUnderPhoto, String textBottom, String textColor, String backgroundColor, String cloudinaryDirectory) {
+        this.textUpper = textUpper;
+        this.textUnderPhoto = textUnderPhoto;
+        this.textBottom = textBottom;
+        this.textColor = textColor;
+        this.backgroundColor = backgroundColor;
         this.cloudinaryDirectory = cloudinaryDirectory;
     }
 
@@ -78,6 +88,14 @@ public class EventText {
 
     public String getCloudinaryDirectory() {
         return cloudinaryDirectory;
+    }
+
+    public String getBackgroundColor() {
+        return backgroundColor;
+    }
+
+    public void setBackgroundColor(String backgroundColor) {
+        this.backgroundColor = backgroundColor;
     }
 
     public void setCloudinaryDirectory(String cloudinaryDirectory) {

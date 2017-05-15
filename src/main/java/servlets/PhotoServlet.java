@@ -53,7 +53,7 @@ public class PhotoServlet extends HttpServlet {
                 .transformation(new Transformation())
                 .generate(eventText.getCloudinaryDirectory()+"/logo");
         String linkIcon = cloudinary.url().format("jpg")
-                .transformation(new Transformation().height(300).width(300))
+                .transformation(new Transformation().width(1920))
                 .generate(eventText.getCloudinaryDirectory()+"/logo");
         String logo = cloudinary.url().format("jpg")
                 .transformation(new Transformation())

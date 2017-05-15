@@ -29,6 +29,7 @@
         <%=eventText.getTextUpper()%>
         <%}%>
     </title>
+    <meta property="og:image" content="<%=favicon%>" />
 </head>
 <body
         <%if (backgroundImage==null||backgroundImage.equals("")){

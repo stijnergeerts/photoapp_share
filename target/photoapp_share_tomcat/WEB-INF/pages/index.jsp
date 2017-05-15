@@ -12,11 +12,9 @@
     final String linkIcon = (String)request.getAttribute("linkIcon");
     final String logo = (String)request.getAttribute("logo");
     final String qr = (String)request.getAttribute("qr");
-     String backgroundImage = (String)request.getAttribute("backgroundImage");
+    final String backgroundImage = (String)request.getAttribute("backgroundImage");
     final String[] photos = (String[])request.getAttribute("photos");
     final EventText eventText = (EventText)request.getAttribute("eventText");
-
-    backgroundImage="";
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +29,7 @@
         <%=eventText.getTextUpper()%>
         <%}%>
     </title>
+    <meta property="og:image" content="<%=favicon%>" />
 </head>
 <body
         <%if (backgroundImage==null||backgroundImage.equals("")){

@@ -26,3 +26,7 @@
 0:0:0:0:0:0:0:1 - - [15/May/2017:11:23:25 +0800] "GET /resources/css/main.css HTTP/1.1" 404 - http-bio-9966-exec-2 0
 0:0:0:0:0:0:0:1 - - [15/May/2017:11:24:52 +0800] "GET /photoapp_share_tomcat/photo?eventId=59116c03ffdcbe0004ca8d02&photo=chaumet1&photo=chaumet2&photo=chaumet3 HTTP/1.1" 200 1403 http-bio-9966-exec-1 5320
 0:0:0:0:0:0:0:1 - - [15/May/2017:11:24:52 +0800] "GET /resources/css/main.css HTTP/1.1" 404 - http-bio-9966-exec-2 0
+0:0:0:0:0:0:0:1 - - [15/May/2017:11:46:48 +0800] "GET /photoapp_share_tomcat/photo?eventId=59116c03ffdcbe0004ca8d02&photo=chaumet1&photo=chaumet2&photo=chaumet3 HTTP/1.1" 200 1588 http-bio-9966-exec-1 2193
+0:0:0:0:0:0:0:1 - - [15/May/2017:11:47:03 +0800] "GET /photoapp_share_tomcat/photo?eventId=59116c03ffdcbe0004ca8d02&photo=chaumet1&photo=chaumet2&photo=chaumet3 HTTP/1.1" 200 1588 http-bio-9966-exec-4 899
+0:0:0:0:0:0:0:1 - - [15/May/2017:11:47:03 +0800] "GET /resources/css/main.css HTTP/1.1" 404 - http-bio-9966-exec-7 0
+0:0:0:0:0:0:0:1 - - [15/May/2017:11:47:29 +0800] "GET /resources/css/main.css HTTP/1.1" 404 - http-bio-9966-exec-8 0

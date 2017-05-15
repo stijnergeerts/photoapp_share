@@ -31,6 +31,7 @@
         <%}%>
     </title>
     <meta property="og:image" content="<%=favicon%>" />
+    <meta id="square-image" content="<%=linkIcon%>">
 </head>
 <body
         <%if (backgroundImage==null||backgroundImage.equals("")){

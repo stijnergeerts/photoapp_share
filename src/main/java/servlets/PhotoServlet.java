@@ -5,8 +5,8 @@ import com.cloudinary.Transformation;
 import com.cloudinary.utils.ObjectUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import dom.EventText;
-import service.EventTextService;
+import dom.Event;
+import service.EventService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,54 +29,50 @@ public class PhotoServlet extends HttpServlet {
                 "api_secret", "8jgQTrfU97rWk5Quqm1hP2I11hM"
         ));
 
-        final String title = req.getParameter("title");
 
         final String eventId = req.getParameter("eventId");
 
         final String[] array = req.getParameterValues("photo");
 
-        final EventTextService eventTextService = new EventTextService();
+        final EventService eventService = new EventService();
 
-        EventText eventText;
+        Event event;
 
         String jsonString = null;
         try {
-            jsonString = eventTextService.getEventText("https://photoapp-backend.herokuapp.com/api/event/getEventTextById/"+eventId);
+            jsonString = eventService.getEvent("https://photoapp-backend.herokuapp.com/api/event/getEventShareById/"+eventId);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
-        eventText = gson.fromJson(jsonString, EventText.class);
+        event = gson.fromJson(jsonString, Event.class);
 
         String favicon = cloudinary.url().format("jpg")
                 .transformation(new Transformation())
-                .generate(eventText.getCloudinaryDirectory()+"/logo");
+                .generate(event.getEventName()+"/share-page-layout/logo");
         String linkIcon = cloudinary.url().format("jpg")
                 .transformation(new Transformation().width(300).height(300))
-                .generate(eventText.getCloudinaryDirectory()+"/logo");
+                .generate(event.getEventName()+"/share-page-layout/logo");
         String logo = cloudinary.url().format("jpg")
                 .transformation(new Transformation())
-                .imageTag(eventText.getCloudinaryDirectory()+"/logo", Cloudinary.asMap("alt","Logo_"+title));
-        String qrImage = cloudinary.url().format("jpg")
-                .transformation(new Transformation())
-                .imageTag(eventText.getCloudinaryDirectory()+"/qr", Cloudinary.asMap("alt","Qr_"+title));
+                .imageTag(event.getEventName()+"/share-page-layout/logo", Cloudinary.asMap("alt","Logo"));
         String backgroundImage = cloudinary.url().format("jpg")
                 .transformation(new Transformation())
-                .generate(eventText.getCloudinaryDirectory()+"/backgroundImage");
+                .generate(event.getEventName()+"/share-page-layout/backgroundImage");
         for(int i = 0; i<array.length; i++){
             array[i]=
                     cloudinary.url().format("jpg")
                             .transformation(new Transformation())
-                            .imageTag(eventText.getCloudinaryDirectory()+"/"+array[i], Cloudinary.asMap("alt","Sample Image"));
+                            .imageTag(event.getEventName()+"/event-photos/"+array[i], Cloudinary.asMap("alt","Sample Image"));
         }
         req.setAttribute("favicon", favicon);
         req.setAttribute("linkIcon", linkIcon);
-        req.setAttribute("logo", logo);
-        req.setAttribute("qr", qrImage);
+        req.setAttribute("logo", event.eventText.getLogo());
+        req.setAttribute("qrCode", event.eventText.getQrCodeImage());
         req.setAttribute("backgroundImage", backgroundImage);
         req.setAttribute("photos",array);
-        req.setAttribute("eventText", eventText);
+        req.setAttribute("event", event);
 
         req.getRequestDispatcher("/WEB-INF/pages/index.jsp").forward(req,resp);
     }

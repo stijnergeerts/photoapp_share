@@ -1,3 +1,4 @@
-service/EventTextService.class
-servlets/PhotoServlet.class
+dom/Event.class
 dom/EventText.class
+service/EventService.class
+servlets/PhotoServlet.class

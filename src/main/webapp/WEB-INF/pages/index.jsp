@@ -1,5 +1,6 @@
 <%@ page import="java.util.Map" %>
-<%@ page import="dom.EventText" %><%--
+<%@ page import="dom.EventText" %>
+<%@ page import="dom.Event" %><%--
   Created by IntelliJ IDEA.
   User: stijnergeerts
   Date: 5/05/17
@@ -9,20 +10,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     final String favicon = (String)request.getAttribute("favicon");
-    final String linkIcon = (String)request.getAttribute("linkIcon");
     final String logo = (String)request.getAttribute("logo");
-    final String qr = (String)request.getAttribute("qr");
+    final String qrCode = (String)request.getAttribute("qrCode");
     final String backgroundImage = (String)request.getAttribute("backgroundImage");
     final String[] photos = (String[])request.getAttribute("photos");
-    final EventText eventText = (EventText)request.getAttribute("eventText");
+    final Event event = (Event) request.getAttribute("event");
+    final EventText eventText = event.getEventText();
 %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../resources/css/main.css" rel="stylesheet" type="text/css">
-    <link rel="icon" href="<%=favicon%>">
-    <link rel="shortcut icon" type="image/x-icon" href="<%=favicon%>">
+    <link rel="icon" href="<%=logo%>">
+    <link rel="shortcut icon" type="image/x-icon" href="<%=logo%>">
     <title>
         <%if (eventText.getTextUpper()==null||eventText.getTextUpper().equals("")){%>
         <%=eventText.getCloudinaryDirectory()%>
@@ -30,23 +31,19 @@
         <%=eventText.getTextUpper()%>
         <%}%>
     </title>
-    <meta property="og:image" content="<%=favicon%>" />
-    <meta id="square-image" content="<%=linkIcon%>">
+    <meta property="og:image" content="<%=logo%>" />
 </head>
 <body
-        <%if (backgroundImage==null||backgroundImage.equals("")){
-            if (eventText.getBackgroundColor()==null||eventText.getBackgroundColor().equals("")){%>
+        <%if (event.eventText.isBackgroundImageToggle()){%>
+            style="background-image: url(<%=eventText.getBackgroundImage()%>)"
         <%} else {%>
-        style="background-color: <%=eventText.getBackgroundColor()%>"
-        <%}%>
-        <%} else {%>
-        style="background-image: url(<%=backgroundImage%>)"
+            style="background-color: <%=eventText.getBackgroundColor()%>"
         <%}%>
 >
-<div style="display:none;"><img src="<%=linkIcon%>"/></div>
 <div id="logo">
-    <%=logo%>
-    <img src="<%=linkIcon%>" class="hidden">
+    <%if (logo!=null){%>
+    <img src="<%=logo%>">
+    <%}%>
 </div>
 <%if (eventText.getTextUpper()==null||eventText.getTextUpper().equals("")){%>
 <%} else {%>
@@ -66,7 +63,9 @@
 </div>
 <%}%>
 <div id="qr">
-    <%=qr%>
+    <%if (qrCode!=null){%>
+    <img src="<%=qrCode%>">
+    <%}%>
 </div>
 <%if (eventText.getTextBottom()==null||eventText.getTextBottom().equals("")){%>
 <%} else {%>

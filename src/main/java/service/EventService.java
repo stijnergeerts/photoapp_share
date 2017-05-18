@@ -10,7 +10,7 @@ import java.nio.charset.Charset;
 /**
  * Created by stijnergeerts on 8/05/17.
  */
-public class EventTextService {
+public class EventService {
 
     private static String readAll(Reader rd) throws IOException {
         StringBuilder sb = new StringBuilder();
@@ -33,7 +33,7 @@ public class EventTextService {
         }
     }
 
-    public String getEventText(String url) throws IOException, InterruptedException {
+    public String getEvent(String url) throws IOException, InterruptedException {
         JSONObject jsonObject = readJsonFromUrl(url);
         return jsonObject.toString();
     }

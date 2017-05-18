@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1bb3ead-1504-485f-a311-1f78470c5504" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dom/Event.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/servlets/PhotoServlet.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/service/EventTextService.java" afterPath="$PROJECT_DIR$/src/main/java/service/EventService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/photoapp_share_tomcat.war" afterPath="$PROJECT_DIR$/target/photoapp_share_tomcat.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/photoapp_share_tomcat/WEB-INF/classes/servlets/PhotoServlet.class" afterPath="$PROJECT_DIR$/target/photoapp_share_tomcat/WEB-INF/classes/servlets/PhotoServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/photoapp_share_tomcat/org/apache/jsp/WEB_002dINF/pages/index_jsp.class" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/photoapp_share_tomcat/org/apache/jsp/WEB_002dINF/pages/index_jsp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dom/EventText.java" afterPath="$PROJECT_DIR$/src/main/java/dom/EventText.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/PhotoServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/PhotoServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/photoapp_share_tomcat/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/target/photoapp_share_tomcat/WEB-INF/pages/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/photoapp_share_tomcat/org/apache/jsp/WEB_002dINF/pages/index_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/photoapp_share_tomcat/org/apache/jsp/WEB_002dINF/pages/index_jsp.java" />
-    </list>
+    <list default="true" id="b1bb3ead-1504-485f-a311-1f78470c5504" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -995,12 +981,12 @@
       <workItem from="1494828184138" duration="564000" />
       <workItem from="1494829159157" duration="35000" />
       <workItem from="1495003035340" duration="2107000" />
-      <workItem from="1495087818588" duration="5532000" />
+      <workItem from="1495087818588" duration="5598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29867000" />
+    <option name="totallyTimeSpent" value="29933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1141" extended-state="6" />

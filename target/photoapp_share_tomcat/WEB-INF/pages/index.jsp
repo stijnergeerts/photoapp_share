@@ -25,10 +25,10 @@
     <link rel="icon" href="<%=logo%>">
     <link rel="shortcut icon" type="image/x-icon" href="<%=logo%>">
     <title>
-        <%if (eventText.getTextUpper()==null||eventText.getTextUpper().equals("")){%>
+        <%if (eventText.getTabTitle()==null||eventText.getTabTitle().equals("")){%>
         <%=eventText.getCloudinaryDirectory()%>
         <%} else { %>
-        <%=eventText.getTextUpper()%>
+        <%=eventText.getTabTitle()%>
         <%}%>
     </title>
     <meta property="og:image" content="<%=logo%>" />
@@ -45,16 +45,22 @@
     <img src="<%=logo%>">
     <%}%>
 </div>
-<%if (eventText.getTextUpper()==null||eventText.getTextUpper().equals("")){%>
-<%} else {%>
-<div id="textUpper">
+        <%if (eventText.getTextUpper()==null||eventText.getTextUpper().equals("")){%>
+        <%} else {%>
+    <div id="textUpper">
     <p style="color: <%=eventText.getTextColor()%>"><%=eventText.getTextUpper()%></p>
-</div>
-<%}%>
-<div class="images">
-    <%for (int i=0; i<photos.length; i++){%>
-    <%=photos[i]%>
+    </div>
+        <%}%>
+    <%if (eventText.getTextAbovePhoto()==null||eventText.getTextAbovePhoto().equals("")){%>
+    <%} else {%>
+    <div id="textAbove">
+        <p style="color: <%=eventText.getTextColor()%>"><%=eventText.getTextAbovePhoto()%></p>
+    </div>
     <%}%>
+    <div class="images">
+        <%for (int i=0; i<photos.length; i++){%>
+        <%=photos[i]%>
+        <%}%>
 </div>
 <%if (eventText.getTextUnderPhoto()==null||eventText.getTextUnderPhoto().equals("")){%>
 <%} else {%>

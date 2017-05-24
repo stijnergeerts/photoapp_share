@@ -7,7 +7,9 @@ public class EventText {
 
     public String eventName;
     public String logo;
+    public String tabTitle;
     public String textUpper;
+    public String textAbovePhoto;
     public String textUnderPhoto;
     public String textBottom;
     public String textColor;
@@ -97,6 +99,22 @@ public class EventText {
         this.qrCodeImage = qrCodeImage;
     }
 
+    public EventText(String eventName, String logo, String tabTitle, String textUpper, String textAbovePhoto, String textUnderPhoto, String textBottom, String textColor, String backgroundColor, String backgroundImage, boolean backgroundImageToggle, String cloudinaryDirectory, String qrCodeImage) {
+        this.eventName = eventName;
+        this.logo = logo;
+        this.tabTitle = tabTitle;
+        this.textUpper = textUpper;
+        this.textAbovePhoto = textAbovePhoto;
+        this.textUnderPhoto = textUnderPhoto;
+        this.textBottom = textBottom;
+        this.textColor = textColor;
+        this.backgroundColor = backgroundColor;
+        this.backgroundImage = backgroundImage;
+        this.backgroundImageToggle = backgroundImageToggle;
+        this.cloudinaryDirectory = cloudinaryDirectory;
+        this.qrCodeImage = qrCodeImage;
+    }
+
     public EventText() {
     }
 
@@ -116,12 +134,28 @@ public class EventText {
         this.logo = logo;
     }
 
+    public String getTabTitle() {
+        return tabTitle;
+    }
+
+    public void setTabTitle(String tabTitle) {
+        this.tabTitle = tabTitle;
+    }
+
     public String getTextUpper() {
         return textUpper;
     }
 
     public void setTextUpper(String textUpper) {
         this.textUpper = textUpper;
+    }
+
+    public String getTextAbovePhoto() {
+        return textAbovePhoto;
+    }
+
+    public void setTextAbovePhoto(String textAbovePhoto) {
+        this.textAbovePhoto = textAbovePhoto;
     }
 
     public String getTextUnderPhoto() {

@@ -1,6 +1,5 @@
 <component name="libraryTable">
-  <library name="com.cloudinary:cloudinary-http44:1.12.0" type="repository">
-    <properties maven-id="com.cloudinary:cloudinary-http44:1.12.0" />
+  <library name="com.cloudinary:cloudinary-http44:1.12.0">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/com/cloudinary/cloudinary-http44/1.12.0/cloudinary-http44-1.12.0.jar!/" />
       <root url="jar://$MAVEN_REPOSITORY$/com/cloudinary/cloudinary-core/1.12.0/cloudinary-core-1.12.0.jar!/" />

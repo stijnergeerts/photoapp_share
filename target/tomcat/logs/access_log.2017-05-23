@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [23/May/2017:16:42:15 +0800] "GET /photoapp_share_tomcat/photo?eventId=591032b5508f4c0004abd3cb&photo=jaeger1&photo=jaeger2 HTTP/1.1" 200 2116 http-bio-9966-exec-2 1341
+0:0:0:0:0:0:0:1 - - [23/May/2017:16:42:15 +0800] "GET /resources/css/main.css HTTP/1.1" 404 - http-bio-9966-exec-3 0

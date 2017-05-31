@@ -8,7 +8,7 @@ import java.net.URL;
 import java.nio.charset.Charset;
 
 /**
- * Created by stijnergeerts on 8/05/17.
+ * This service is used to make the backend call and retrieve the right event
  */
 public class EventService {
 
@@ -37,11 +37,5 @@ public class EventService {
         JSONObject jsonObject = readJsonFromUrl(url);
         return jsonObject.toString();
     }
-
-    /*public static void main(String[] args) throws IOException {
-        JSONObject jsonObject = readJsonFromUrl("https://photoapp-backend.herokuapp.com/api/event/getEventTextById/591032b5508f4c0004abd3cb");
-        System.out.println(jsonObject);
-
-    }*/
 }
 

@@ -21,6 +21,9 @@ import java.io.IOException;
 @WebServlet("/photo")
 public class PhotoServlet extends HttpServlet {
 
+    /**
+     * Cloudinary configuration
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
@@ -29,7 +32,9 @@ public class PhotoServlet extends HttpServlet {
                 "api_secret", "8jgQTrfU97rWk5Quqm1hP2I11hM"
         ));
 
-
+        /**
+         * Filter the eventId and photo parameters out of the URL
+         */
         final String eventId = req.getParameter("eventId");
 
         final String[] array = req.getParameterValues("photo");
@@ -38,25 +43,42 @@ public class PhotoServlet extends HttpServlet {
 
         Event event;
 
+        /**
+         * Make a backend-call to retrieve the right event in JSON format
+         */
         String jsonString = null;
         try {
             jsonString = eventService.getEvent("https://photoapp-backend.herokuapp.com/api/event/getEventShareById/"+eventId);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        /**
+         * Parse the JSON string into an Event object
+         */
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
         event = gson.fromJson(jsonString, Event.class);
 
+        /**
+         * Get the selected pictures out of the Cloudinary library
+         */
         for(int i = 0; i<array.length; i++){
             array[i]=
                     cloudinary.url().format("jpg")
                             .transformation(new Transformation())
                             .imageTag(event.getEventName()+"/event-photos/"+array[i], Cloudinary.asMap("alt","Sample Image"));
         }
+
+        /**
+         * Set the attributes for the request
+         */
         req.setAttribute("photos",array);
         req.setAttribute("event", event);
 
+        /**
+         * Call the JSP page
+         */
         req.getRequestDispatcher("/WEB-INF/pages/index.jsp").forward(req,resp);
     }
 }

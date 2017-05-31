@@ -4,7 +4,6 @@
     <list default="true" id="b1bb3ead-1504-485f-a311-1f78470c5504" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2017-05-30" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2017-05-30" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+              <caret line="27" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -568,12 +567,12 @@
       <workItem from="1495616358420" duration="253000" />
       <workItem from="1495616658159" duration="520000" />
       <workItem from="1496112811906" duration="4101000" />
-      <workItem from="1496198257171" duration="667000" />
+      <workItem from="1496198257171" duration="956000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37161000" />
+    <option name="totallyTimeSpent" value="37450000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1141" extended-state="6" />
@@ -1096,7 +1095,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <caret line="27" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>

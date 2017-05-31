@@ -9,10 +9,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    final String favicon = (String)request.getAttribute("favicon");
     final String logo = (String)request.getAttribute("logo");
     final String qrCode = (String)request.getAttribute("qrCode");
-    final String backgroundImage = (String)request.getAttribute("backgroundImage");
     final String[] photos = (String[])request.getAttribute("photos");
     final Event event = (Event) request.getAttribute("event");
     final EventText eventText = event.getEventText();
@@ -22,8 +20,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../resources/css/main.css" rel="stylesheet" type="text/css">
-    <link rel="icon" href="<%=logo%>">
-    <link rel="shortcut icon" type="image/x-icon" href="<%=logo%>">
+    <link rel="icon" href="<%=eventText.logo%>">
+    <link rel="shortcut icon" type="image/x-icon" href="<%=eventText.logo%>">
     <title>
         <%if (eventText.getTabTitle()==null||eventText.getTabTitle().equals("")){%>
         <%=eventText.getCloudinaryDirectory()%>
@@ -31,7 +29,7 @@
         <%=eventText.getTabTitle()%>
         <%}%>
     </title>
-    <meta property="og:image" content="<%=logo%>" />
+    <meta property="og:image" content="<%=eventText.logo%>" />
 </head>
 <body
         <%if (event.eventText.isBackgroundImageToggle()){%>
@@ -41,8 +39,8 @@
         <%}%>
 >
 <div id="logo">
-    <%if (logo!=null){%>
-    <img src="<%=logo%>">
+    <%if (eventText.logo!=null){%>
+    <img src="<%=eventText.logo%>">
     <%}%>
 </div>
         <%if (eventText.getTextUpper()==null||eventText.getTextUpper().equals("")){%>
@@ -69,8 +67,8 @@
 </div>
 <%}%>
 <div id="qr">
-    <%if (qrCode!=null){%>
-    <img src="<%=qrCode%>">
+    <%if (eventText.qrCodeImage!=null){%>
+    <img src="<%=eventText.qrCodeImage%>">
     <%}%>
 </div>
 <%if (eventText.getTextBottom()==null||eventText.getTextBottom().equals("")){%>

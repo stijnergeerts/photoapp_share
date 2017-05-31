@@ -48,29 +48,12 @@ public class PhotoServlet extends HttpServlet {
         Gson gson = builder.create();
         event = gson.fromJson(jsonString, Event.class);
 
-        String favicon = cloudinary.url().format("jpg")
-                .transformation(new Transformation())
-                .generate(event.getEventName()+"/share-page-layout/logo");
-        String linkIcon = cloudinary.url().format("jpg")
-                .transformation(new Transformation().width(300).height(300))
-                .generate(event.getEventName()+"/share-page-layout/logo");
-        String logo = cloudinary.url().format("jpg")
-                .transformation(new Transformation())
-                .imageTag(event.getEventName()+"/share-page-layout/logo", Cloudinary.asMap("alt","Logo"));
-        String backgroundImage = cloudinary.url().format("jpg")
-                .transformation(new Transformation())
-                .generate(event.getEventName()+"/share-page-layout/backgroundImage");
         for(int i = 0; i<array.length; i++){
             array[i]=
                     cloudinary.url().format("jpg")
                             .transformation(new Transformation())
                             .imageTag(event.getEventName()+"/event-photos/"+array[i], Cloudinary.asMap("alt","Sample Image"));
         }
-        req.setAttribute("favicon", favicon);
-        req.setAttribute("linkIcon", linkIcon);
-        req.setAttribute("logo", event.eventText.getLogo());
-        req.setAttribute("qrCode", event.eventText.getQrCodeImage());
-        req.setAttribute("backgroundImage", backgroundImage);
         req.setAttribute("photos",array);
         req.setAttribute("event", event);
 

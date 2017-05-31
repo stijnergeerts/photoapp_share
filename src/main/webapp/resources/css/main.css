@@ -3,10 +3,6 @@ body{
     margin: 0;
     padding: 0 10px;
     overflow-x: hidden;
-    background: no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 .hidden{

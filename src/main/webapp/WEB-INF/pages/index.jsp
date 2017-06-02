@@ -59,13 +59,13 @@
     <%}%>
 </div>
 
-<%--
-  Set the text under the logo (textUpper). (The main title of the page)
---%>
+        <%--
+        Set the text under the logo (textUpper). (The main title of the page)
+        --%>
         <%if (eventText.getTextUpper()==null||eventText.getTextUpper().equals("")){%>
         <%} else {%>
     <div id="textUpper">
-    <p style="color: <%=eventText.getTextColor()%>"><%=eventText.getTextUpper()%></p>
+        <p style="color: <%=eventText.getTextColor()%>"><%=event.getEventText().textUpper%></p>
     </div>
         <%}%>
 

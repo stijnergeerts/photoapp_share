@@ -47,11 +47,7 @@ public class PhotoServlet extends HttpServlet {
          * Make a backend-call to retrieve the right event in JSON format
          */
         String jsonString = null;
-        try {
-            jsonString = eventService.getEvent("https://photoapp-backend.herokuapp.com/api/event/getEventShareById/"+eventId);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        jsonString = eventService.getJSON("https://photoapp-backend.herokuapp.com/api/event/getEventShareById/"+eventId);
 
         /**
          * Parse the JSON string into an Event object

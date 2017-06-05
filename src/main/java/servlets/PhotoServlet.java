@@ -15,9 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * Created by stijnergeerts on 5/05/17.
- */
 @WebServlet("/photo")
 public class PhotoServlet extends HttpServlet {
 
@@ -47,7 +44,7 @@ public class PhotoServlet extends HttpServlet {
          * Make a backend-call to retrieve the right event in JSON format
          */
         String jsonString = null;
-        jsonString = eventService.getJSON("https://photoapp-backend.herokuapp.com/api/event/getEventShareById/"+eventId);
+        jsonString = eventService.getJSON("https://photoapp-backend.herokuapp.com/api/event/getEventShareById/" + eventId);
 
         /**
          * Parse the JSON string into an Event object
@@ -59,22 +56,22 @@ public class PhotoServlet extends HttpServlet {
         /**
          * Get the selected pictures out of the Cloudinary library
          */
-        for(int i = 0; i<array.length; i++){
-            array[i]=
+        for (int i = 0; i < array.length; i++) {
+            array[i] =
                     cloudinary.url().format("jpg")
                             .transformation(new Transformation())
-                            .imageTag(event.getEventName()+"/event-photos/"+array[i], Cloudinary.asMap("alt","Sample Image"));
+                            .imageTag(event.getEventName() + "/event-photos/" + array[i], Cloudinary.asMap("alt", "event-image-"+i));
         }
 
         /**
          * Set the attributes for the request
          */
-        req.setAttribute("photos",array);
+        req.setAttribute("photos", array);
         req.setAttribute("event", event);
 
         /**
          * Call the JSP page
          */
-        req.getRequestDispatcher("/WEB-INF/pages/index.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/pages/index.jsp").forward(req, resp);
     }
 }

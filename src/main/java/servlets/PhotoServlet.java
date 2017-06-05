@@ -34,7 +34,7 @@ public class PhotoServlet extends HttpServlet {
          */
         final String eventId = req.getParameter("eventId");
 
-        final String[] array = req.getParameterValues("photo");
+        final String[] photos = req.getParameterValues("photo");
 
         final EventService eventService = new EventService();
 
@@ -43,8 +43,7 @@ public class PhotoServlet extends HttpServlet {
         /**
          * Make a backend-call to retrieve the right event in JSON format
          */
-        String jsonString = null;
-        jsonString = eventService.getJSON("https://photoapp-backend.herokuapp.com/api/event/getEventShareById/" + eventId);
+        String jsonString = eventService.getJSON("https://photoapp-backend.herokuapp.com/api/event/getEventShareById/" + eventId);
 
         /**
          * Parse the JSON string into an Event object
@@ -56,17 +55,17 @@ public class PhotoServlet extends HttpServlet {
         /**
          * Get the selected pictures out of the Cloudinary library
          */
-        for (int i = 0; i < array.length; i++) {
-            array[i] =
+        for (int i = 0; i < photos.length; i++) {
+            photos[i] =
                     cloudinary.url().format("jpg")
                             .transformation(new Transformation())
-                            .imageTag(event.getEventName() + "/event-photos/" + array[i], Cloudinary.asMap("alt", "event-image-"+i));
+                            .imageTag(event.getEventName() + "/event-photos/" + photos[i], Cloudinary.asMap("alt", "event-image-"+i));
         }
 
         /**
          * Set the attributes for the request
          */
-        req.setAttribute("photos", array);
+        req.setAttribute("photos", photos);
         req.setAttribute("event", event);
 
         /**

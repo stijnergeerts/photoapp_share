@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="service.EventServiceTest" time="2.199" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="service.EventServiceTest" time="1.938" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2016.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -13,7 +13,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7535"/>
+    <property name="idea.launcher.port" value="7533"/>
     <property name="user.country" value="BE"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
@@ -62,5 +62,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="service.EventServiceTest" name="aCheckSharePageComponents" time="2.199"/>
+  <testcase classname="service.EventServiceTest" name="aCheckSharePageComponents" time="1.938"/>
 </testsuite>

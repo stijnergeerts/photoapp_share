@@ -30,7 +30,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="<%=eventText.logo%>">
     <title>
         <%if (eventText.getTabTitle()==null||eventText.getTabTitle().equals("")){%>
-        <%=eventText.getCloudinaryDirectory()%>
+        <%=eventText.getEventName()%>
         <%} else { %>
         <%=eventText.getTabTitle()%>
         <%}%>

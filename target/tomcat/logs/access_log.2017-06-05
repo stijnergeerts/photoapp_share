@@ -7,3 +7,10 @@
 0:0:0:0:0:0:0:1 - - [05/Jun/2017:11:05:40 +0800] "GET /photoapp_share_tomcat/photo?eventId=591032b5508f4c0004abd3cb&photo=jaeger1&photo=jaeger2 HTTP/1.1" 200 2217 http-bio-9966-exec-1 1906
 0:0:0:0:0:0:0:1 - - [05/Jun/2017:11:05:40 +0800] "GET /resources/css/main.css HTTP/1.1" 404 - http-bio-9966-exec-4 0
 0:0:0:0:0:0:0:1 - - [05/Jun/2017:11:05:40 +0800] "GET /photoapp_share_tomcat/null HTTP/1.1" 404 1003 http-bio-9966-exec-5 5
+0:0:0:0:0:0:0:1 - - [05/Jun/2017:14:12:34 +0800] "GET /photoapp_share_tomcat/photo?eventId=591032b5508f4c0004abd3cb&photo=jaeger1&photo=jaeger2 HTTP/1.1" 200 2217 http-bio-9966-exec-1 1629
+0:0:0:0:0:0:0:1 - - [05/Jun/2017:14:12:34 +0800] "GET /resources/css/main.css HTTP/1.1" 404 - http-bio-9966-exec-4 0
+0:0:0:0:0:0:0:1 - - [05/Jun/2017:14:12:34 +0800] "GET /photoapp_share_tomcat/null HTTP/1.1" 404 1003 http-bio-9966-exec-5 3
+0:0:0:0:0:0:0:1 - - [05/Jun/2017:14:12:46 +0800] "GET /resources/css/main.css HTTP/1.1" 404 - http-bio-9966-exec-6 0
+0:0:0:0:0:0:0:1 - - [05/Jun/2017:14:23:46 +0800] "GET /photoapp_share_tomcat/photo?eventId=591032b5508f4c0004abd3cb&photo=jaeger1&photo=jaeger2 HTTP/1.1" 200 2217 http-bio-9966-exec-1 2163
+0:0:0:0:0:0:0:1 - - [05/Jun/2017:14:23:46 +0800] "GET /resources/css/main.css HTTP/1.1" 404 - http-bio-9966-exec-4 0
+0:0:0:0:0:0:0:1 - - [05/Jun/2017:14:23:46 +0800] "GET /photoapp_share_tomcat/null HTTP/1.1" 404 1003 http-bio-9966-exec-5 4

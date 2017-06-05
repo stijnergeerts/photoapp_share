@@ -14,6 +14,11 @@ import java.util.logging.Logger;
  */
 public class EventService {
 
+    /**
+     * Getting the correct Event object in JSON format.
+     * @param url String
+     * @return JSON String
+     */
     public String getJSON(String url) {
         HttpURLConnection c = null;
         try {

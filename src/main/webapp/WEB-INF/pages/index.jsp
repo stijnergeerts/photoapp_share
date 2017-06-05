@@ -50,68 +50,71 @@
         <%}%>
 >
 
-<%--
-  Set the eventLogo
---%>
-<div id="logo">
-    <%if (eventText.logo!=null){%>
-    <img src="<%=eventText.logo%>">
-    <%}%>
-</div>
+        <%--
+          Set the eventLogo
+        --%>
+        <div id="logo">
+            <%if (eventText.logo!=null){%>
+            <img src="<%=eventText.logo%>">
+            <%}%>
+        </div>
 
         <%--
         Set the text under the logo (textUpper). (The main title of the page)
         --%>
         <%if (eventText.getTextUpper()==null||eventText.getTextUpper().equals("")){%>
         <%} else {%>
-    <div id="textUpper">
-        <p style="color: <%=eventText.getTextColor()%>"><%=event.getEventText().textUpper%></p>
-    </div>
+        <div id="textUpper">
+            <p style="color: <%=eventText.getTextColor()%>"><%=event.getEventText().textUpper%></p>
+        </div>
+            <%}%>
+
+        <%--
+        Set the text above the photo's (textAbovePhoto)
+        --%>
+        <%if (eventText.getTextAbovePhoto()==null||eventText.getTextAbovePhoto().equals("")){%>
+        <%} else {%>
+        <div id="textAbove">
+            <p style="color: <%=eventText.getTextColor()%>"><%=eventText.getTextAbovePhoto()%></p>
+        </div>
         <%}%>
 
-    <%--
-    Set the text above the photo's (textAbovePhoto)
-    --%>
-    <%if (eventText.getTextAbovePhoto()==null||eventText.getTextAbovePhoto().equals("")){%>
-    <%} else {%>
-    <div id="textAbove">
-        <p style="color: <%=eventText.getTextColor()%>"><%=eventText.getTextAbovePhoto()%></p>
-    </div>
-    <%}%>
+        <%--
+        Display the selected photo's
+        --%>
+        <div class="images">
+            <%for (int i=0; i<photos.length; i++){%>
+            <%=photos[i]%>
+            <%}%>
+        </div>
 
-    <%--
-    Display the selected photo's
-    --%>
-    <div class="images">
-        <%for (int i=0; i<photos.length; i++){%>
-        <%=photos[i]%>
+        <%--
+        Set the text under the photo's (textUnderPhoto)
+        --%>
+        <%if (eventText.getTextUnderPhoto()==null||eventText.getTextUnderPhoto().equals("")){%>
+        <%} else {%>
+        <div id="textUnderPhoto">
+            <p style="color: <%=eventText.getTextColor()%>"><%=eventText.getTextUnderPhoto()%></p>
+        </div>
         <%}%>
-</div>
-<%--
-Set the text under the photo's (textUnderPhoto)
---%>
-<%if (eventText.getTextUnderPhoto()==null||eventText.getTextUnderPhoto().equals("")){%>
-<%} else {%>
-<div id="textUnderPhoto">
-    <p style="color: <%=eventText.getTextColor()%>"><%=eventText.getTextUnderPhoto()%></p>
-</div>
-<%}%>
-<%--
-Set the QR-code (qrCodeImage)
---%>
-<div id="qr">
-    <%if (eventText.qrCodeImage!=null){%>
-    <img src="<%=eventText.qrCodeImage%>">
-    <%}%>
-</div>
-<%--
-Set the bottom text (textBottom)
---%>
-<%if (eventText.getTextBottom()==null||eventText.getTextBottom().equals("")){%>
-<%} else {%>
-<div id="textBottom">
-    <p style="color: <%=eventText.getTextColor()%>"><%=eventText.getTextBottom()%></p>
-</div>
-<%}%>
-</body>
+
+        <%--
+        Set the QR-code (qrCodeImage)
+        --%>
+        <div id="qr">
+            <%if (eventText.qrCodeImage!=null){%>
+            <img src="<%=eventText.qrCodeImage%>">
+            <%}%>
+        </div>
+
+        <%--
+        Set the bottom text (textBottom)
+        --%>
+        <%if (eventText.getTextBottom()==null||eventText.getTextBottom().equals("")){%>
+        <%} else {%>
+        <div id="textBottom">
+            <p style="color: <%=eventText.getTextColor()%>"><%=eventText.getTextBottom()%></p>
+        </div>
+        <%}%>
+    </body>
 </html>
